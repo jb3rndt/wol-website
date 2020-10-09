@@ -1,0 +1,65 @@
+.error {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(255, 106, 106);
+    border: 2px solid red;
+    box-shadow: 0px 0px 2px red inset;
+    border-radius: 10px;
+}
+
+.success {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(136, 255, 106);
+    border: 2px solid green;
+    box-shadow: 0px 0px 2px green inset;
+    border-radius: 10px;
+}
+
+#classic-wol-form {
+    width: 40%;
+    margin: auto;
+}
+
+#preset-wol-form {
+    width: 40%;
+    margin: auto;
+}
+
+#create-preset-form {
+    width: 40%;
+    margin: auto;
+}
+
+input {
+    width: 100%;
+    display: block;
+    padding: 7px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    font-size: 14px;
+    border: 2px solid lightgray;
+    box-shadow: 0 0 2px lightgray inset;
+}
+
+label {
+    text-align: center;
+    display: block;
+}
+
+input[type="submit"] {
+    background-color: #ffb108;
+    border: 2px solid #ff9c08;
+    box-shadow: 0 0 2px #ff9c08 inset;
+    margin: 20px 0px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff9c08;
+}
+
+input[type="submit"]:active {
+    background-color: lightgreen;
+    border-color: green;
+}

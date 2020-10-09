@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Jannis Berndt - Wake on Lan</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Jannis Berndt">
+        <meta name="description" content="This Website is for sending Wake on Lan Packets.">
+        <link rel="stylesheet" href="res/css/index.css">
+        <link rel="stylesheet" href="res/css/global.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/sha1.js"></script>
+        <script type="text/javascript" src="res/js/index.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="logo-title-container">
+                <div class="logo-container"><img src="res/images/power.svg"></div>
+                <h1><strong>Wake on Lan</strong></h1>
+            </div>
+            <nav>
+                <a>Wake on Lan</a>
+                <a>My Profile</a>
+                <a>Login</a>
+                <a>Sign Up</a>
+            </nav>
+        </header>
+        <main>
+            <div id="messages"></div>
+            <div id="classic-wol">
+                <h2>Send custom WoL Packet</h2>
+                <form id="classic-wol-form" method="POST" onsubmit="return false">
+                    <div>
+                        <label for="mac-address">MAC Address:</label>
+                        <input type="text" name="mac-address" placeholder="XX:XX:XX:XX:XX:XX">
+                    </div>
+                    <div>
+                        <label>IP Address or Hostname:</label>
+                        <input type="text" name="ip-or-hostname">
+                    </div>
+                    <div>
+                        <label>Port:</label>
+                        <input type="number" name="port">
+                    </div>
+                    <div>
+                        <label>SecureOn (optional):</label>
+                        <input type="password" name="secureon">
+                    </div>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+            <h2>Send from Preset</h2>
+            <form id="preset-wol-form" method="POST" onsubmit="return false">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name">
+                </div>
+                <div>
+                    <label>SecureOn:</label>
+                    <input type="password" name="secureon">
+                </div>
+                <input type="submit" value="Send">
+            </form>
+            <h2>Create a new Preset</h2>
+            <form id="create-preset-form" method="POST" onsubmit="return false">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name">
+                </div>
+                <div>
+                    <label for="mac-address">MAC Address:</label>
+                    <input type="text" name="mac-address" placeholder="XX:XX:XX:XX:XX:XX">
+                </div>
+                <div>
+                    <label>IP Address or Hostname:</label>
+                    <input type="text" name="ip-or-hostname">
+                </div>
+                <div>
+                    <label>Port:</label>
+                    <input type="number" name="port">
+                </div>
+                <div>
+                    <label>SecureOn:</label>
+                    <input type="password" name="secureon">
+                </div>
+                <input type="submit" value="Create Preset">
+            </form>
+        </main>
+    </body>
+</html>
